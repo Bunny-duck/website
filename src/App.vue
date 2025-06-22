@@ -40,7 +40,7 @@ onUnmounted(() => {
           <div class="absolute inset-0 bg-gradient-to-r from-green-400 to-blue-500 rounded-full opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-sm"></div>
         </div>
         <h3 class="text-2xl font-bold bg-gradient-to-r from-white to-gray-200 bg-clip-text text-transparent group-hover:from-green-400 group-hover:to-blue-400 transition-all duration-300">
-          Vue.js
+          Vue
         </h3>
       </div>
 
