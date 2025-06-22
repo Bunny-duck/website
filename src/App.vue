@@ -158,12 +158,83 @@ onUnmounted(() => {
   </header>
 
   <!-- Main Content with top padding to account for fixed header -->
-  <!-- <main class="pt-20"> -->
+  <main class="pt-20">
     <RouterView />
-  <!-- </main> -->
+  </main>
 
   <!-- Footer Section -->
-  
+  <footer class="bg-gradient-to-r from-gray-900 via-purple-900 to-gray-900 border-t border-gray-700/50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <!-- Company Info -->
+        <div class="col-span-1 md:col-span-2">
+          <div class="flex items-center space-x-3 mb-6">
+            <img src="./assets/logo.svg" alt="Vue.js Logo" class="h-8 w-8">
+            <h3 class="text-xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+              Vue.js
+            </h3>
+          </div>
+          <p class="text-gray-400 mb-6 leading-relaxed">
+            Building the future of web development with cutting-edge technology and 
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">creative innovation</span>. 
+            Let's create something amazing together! ✨
+          </p>
+          <div class="flex space-x-4">
+            <div class="w-10 h-10 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full flex items-center justify-center hover:scale-125 transition-transform cursor-pointer hover:shadow-lg hover:shadow-purple-500/50">
+              <span class="text-white">🐙</span>
+            </div>
+            <div class="w-10 h-10 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center hover:scale-125 transition-transform cursor-pointer hover:shadow-lg hover:shadow-blue-500/50">
+              <span class="text-white">💼</span>
+            </div>
+            <div class="w-10 h-10 bg-gradient-to-r from-pink-500 to-red-500 rounded-full flex items-center justify-center hover:scale-125 transition-transform cursor-pointer hover:shadow-lg hover:shadow-pink-500/50">
+              <span class="text-white">📱</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="text-lg font-semibold text-white mb-6">Quick Links</h4>
+          <ul class="space-y-3">
+            <li><RouterLink to="/" class="text-gray-400 hover:text-purple-400 transition-colors">🏠 Home</RouterLink></li>
+            <li><RouterLink to="/about" class="text-gray-400 hover:text-purple-400 transition-colors">✨ About</RouterLink></li>
+            <li><RouterLink to="/userlist" class="text-gray-400 hover:text-purple-400 transition-colors">👥 Team</RouterLink></li>
+            <li><RouterLink to="/contact" class="text-gray-400 hover:text-purple-400 transition-colors">📧 Contact</RouterLink></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div>
+          <h4 class="text-lg font-semibold text-white mb-6">Get in Touch</h4>
+          <ul class="space-y-3 text-gray-400">
+            <li class="flex items-center space-x-2">
+              <span>📧</span>
+              <span>bunny@gmail.com</span>
+            </li>
+            <li class="flex items-center space-x-2">
+              <span>📱</span>
+              <span>+1 (555) 123-4567</span>
+            </li>
+            <li class="flex items-center space-x-2">
+              <span>📍</span>
+              <span>BP 511, Phum Tropeang Chhuk (Borey Sorla) Sangtak, Street 371, Phnom Penh</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="border-t border-gray-700/50 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <p class="text-gray-400 text-sm">
+          © 2024 Vue.js Company. Made with 💜 and lots of ☕
+        </p>
+        <div class="flex space-x-6 mt-4 md:mt-0">
+          <a href="#" class="text-gray-400 hover:text-purple-400 transition-colors text-sm">Privacy Policy</a>
+          <a href="#" class="text-gray-400 hover:text-purple-400 transition-colors text-sm">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
 </template>
 
 <script>
@@ -180,4 +251,46 @@ export default {
 }
 </script>
 
+<style scoped>
+/* Active navigation link styles */
+.nav-active {
+  @apply bg-gradient-to-r from-white/20 to-white/10 backdrop-blur-lg border border-white/30 shadow-lg;
+}
 
+.nav-active span {
+  @apply text-white font-bold;
+}
+
+/* Custom animations */
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(168, 85, 247, 0.3); }
+  50% { box-shadow: 0 0 30px rgba(168, 85, 247, 0.6); }
+}
+
+.nav-active {
+  animation: glow 2s ease-in-out infinite;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hide scrollbar but keep functionality */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(31, 41, 55, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #8b5cf6, #ec4899);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #7c3aed, #db2777);
+}
+</style>
