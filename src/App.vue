@@ -92,7 +92,7 @@ onUnmounted(() => {
         >
           <span class="relative z-10 flex items-center space-x-2">
             <span>📧</span>
-            <span>Contacts</span>
+            <span>Contact</span>
           </span>
           <div class="absolute inset-0 bg-gradient-to-r from-green-500 to-emerald-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full"></div>
           <div class="absolute inset-0 bg-gradient-to-r from-green-500/20 to-emerald-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-full blur-xl"></div>
